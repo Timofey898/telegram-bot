@@ -55,7 +55,7 @@ def match_ids_to_prices(template_ids, sell_graph):
     lines = []
     for i in range(min(len(template_ids), len(sell_graph))):
         tid = template_ids[i]
-        if int(tid) > 66000:
+        if int(tid) < 66000:
             price, quantity, _ = sell_graph[i]
             lines.append(f"{tid:<10} {price:<10.2f} {int(quantity):<10}")
     return "\n".join(lines)
