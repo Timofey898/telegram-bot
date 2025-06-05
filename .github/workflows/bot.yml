@@ -27,4 +27,4 @@ jobs:
           API_TOKEN: ${{ secrets.API_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: |
-          python bot.py
+          python tgbot.py
