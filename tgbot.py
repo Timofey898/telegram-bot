@@ -55,7 +55,7 @@ def match_ids_to_prices(template_ids, sell_graph):
     lines = []
     for i in range(min(len(template_ids), len(sell_graph))):
         tid = template_ids[i]
-        if int(tid) > 70000:
+        if int(tid) > 80000:
             price, quantity, _ = sell_graph[i]
             lines.append(f"{tid:<10} {price:<10.2f} {int(quantity):<10}")
     return "\n".join(lines)
@@ -74,7 +74,7 @@ async def send_steam_data(bot, name):
             f"https://steamcommunity.com/market/listings/730/{name}\n"
             f"Самая высокая цена покупки: {buy_price:.2f} руб.\n"
             f"Самая низкая цена продажи: {sell_price:.2f} руб.\n\n"
-            f"Charm Template ID и цены (ID > 70000):\n"
+            f"Charm Template ID и цены (ID > 80000):\n"
             f"{filtered_info}"
         )
 
